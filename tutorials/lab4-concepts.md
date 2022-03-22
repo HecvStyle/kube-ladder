@@ -163,7 +163,7 @@ DaemonSet 相对于其他控制器（Deployment, Job 等）有几个特点：
 
 * DaemonSet controller 创建 pod 时会将指定 nodeName（.spec.nodeName），所以 scheduler 会忽视它。因此：
   * 即使调度器没有启动，DaemonSet 的 pod 也会运行
-  * 即时一个节点被标记为不可调度，由 DaemonSet 启动的容器也会运行在某个节点上
+  * 即使一个节点被标记为不可调度，由 DaemonSet 启动的容器也会运行在某个节点上
 * DaemonSet 启动的 Pod 会无视优先级
 
 **由 default scheduler 调度（从 1.12 开始默认开启）**：
